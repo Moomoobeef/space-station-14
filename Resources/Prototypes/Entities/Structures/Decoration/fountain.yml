@@ -1,0 +1,39 @@
+- type: entity
+  id: WaterFountain
+  parent: BaseStructure
+  name: water fountain
+  description: A decorative water fountain. Maybe You'll get lucky if you toss a coin in. #someone should make it so you can actually toss a coin in and have it do something since treasure.yml adds coins, but idk how
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Decoration/fountain.rsi
+    state: fountain
+    drawdepth: Mobs
+    offset: "0.5,0.5"
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.375,1.25,0.5"
+        density: 150
+        mask:
+        - LargeMobMask
+        layer:
+        - HalfWallLayer
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable. 
+        reagents:
+        - ReagentId: Water
+          Quantity: 9999999
+  - type: SolutionRegeneration
+    solution: tank
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 100
+  - type: DrainableSolution
+    solution: pool
+  - type: Clickable
