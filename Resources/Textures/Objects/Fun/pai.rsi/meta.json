@@ -29,6 +29,21 @@
       ]
     },
     {
+      "name": "pai-screen-scanlines",
+      "delays": [
+        [
+          0.8,
+          0.8
+        ]
+      ]
+    },
+    {
+      "name": "pai-screen-base"
+    },
+    {
+      "name": "pai-expression-basic"
+    },
+    {
       "name": "pai-searching-overlay",
       "delays": [
         [
