@@ -1,3 +1,19 @@
+# hi, I uploaded my unfinished map called "atrium" here
+No, I will not finish it.
+I don't care what you do with it
+feel free to look at it.
+there are some features I love about it, some I hate. Expect certain things to make a comeback in maps I actually do want to finish.
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
 Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
