@@ -12,3 +12,11 @@
   interval: 5.0
   chance: 0.5
   withChat: false
+# Smoker's Cough
+- type: autoEmote
+  id: SmokersCough
+  emote: Cough
+  interval: 5
+  chance: 0.1
+  withChat: true
+  hiddenFromChatWindow: true

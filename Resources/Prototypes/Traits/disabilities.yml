@@ -83,3 +83,13 @@
   category: Disabilities
   components:
   - type: PainNumbness
+
+- type: trait
+  id: SmokersCough
+  name: trait-smokerscough-name
+  description: trait-smokerscough-desc
+  category: Disabilities
+  components:
+  - type: AutoEmote
+    emotes:
+    - SmokersCough

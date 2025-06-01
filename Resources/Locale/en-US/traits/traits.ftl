@@ -65,3 +65,6 @@ trait-spanish-desc = Hola señor, donde esta la biblioteca.
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.
+
+trait-smokerscough-name = Smoker's Cough
+trait-smokerscough-desc = After many years of smoking tobacco products, your lungs struggle and cough frequently.
