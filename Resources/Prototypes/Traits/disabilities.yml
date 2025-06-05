@@ -84,12 +84,25 @@
   components:
   - type: PainNumbness
 
+#- type: trait
+#  id: SmokersCough
+#  name: trait-smokerscough-name
+#  description: trait-smokerscough-desc
+#  category: Disabilities
+#  components:
+#  - type: AutoEmote
+#    emotes:
+#    - SmokersCough
+
 - type: trait
-  id: SmokersCough
-  name: trait-smokerscough-name
-  description: trait-smokerscough-desc
+  id: NicotineAddict
+  name: trait-nicotine-addict-name
+  description: trait-nicotine-addict-desc
   category: Disabilities
   components:
   - type: AutoEmote
     emotes:
     - SmokersCough
+  - type: Addiction
+    reagents:
+    - Nicotine

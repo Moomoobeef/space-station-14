@@ -68,3 +68,6 @@ trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of h
 
 trait-smokerscough-name = Smoker's Cough
 trait-smokerscough-desc = After many years of smoking tobacco products, your lungs struggle and cough frequently.
+
+trait-nicotine-addict-name = Nicotine Addict
+trait-nicotine-addict-desc = You are addicted to nicotine, and will crave a smooth drag of a cigarette, the feel of a cigar, or the taste of nicotine gum.

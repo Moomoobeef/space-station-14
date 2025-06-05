@@ -216,6 +216,10 @@
   plantMetabolism:
   - !type:PlantAdjustHealth
     amount: -5
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:AddictionEffect
 
 # TODO: Replace these nonstandardized effects with generic brain damage
 - type: reagent
