@@ -7,23 +7,24 @@ using Content.Shared.FixedPoint;
 namespace Content.Shared.EntityEffects.Effects.StatusEffects;
 
 /// <summary>
-///     
+///
 /// </summary>
 /// <remarks>
-///     
+///
 /// </remarks>
 public sealed partial class AddictionEffect : EntityEffect
 {
-    
+
 
     public override void Effect(EntityEffectBaseArgs args)
     {
-        if (args is not EntityEffectReagentArgs reagentArgs) 
+        if (args is not EntityEffectReagentArgs reagentArgs)
             return;
-        
-        var evt = new AddictionEvent{
+
+        var evt = new AddictionEvent
+        {
             Amount = reagentArgs.Quantity,
-            Reagent = reagentArgs.Reagent
+            Reagent = reagentArgs.Reagent,
         };
         args.EntityManager.EventBus.RaiseLocalEvent(args.TargetEntity, ref evt);
     }

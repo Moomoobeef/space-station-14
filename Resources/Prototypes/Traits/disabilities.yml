@@ -103,6 +103,4 @@
   - type: AutoEmote
     emotes:
     - SmokersCough
-  - type: Addiction
-    reagents:
-    - Nicotine
+  - type: NicotineAddiction

@@ -1,6 +1,8 @@
 using Robust.Shared.Prototypes;
 using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.GameStates;
+using Content.Shared.FixedPoint;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Addiction;
 
@@ -8,14 +10,35 @@ namespace Content.Shared.Addiction;
 /// Used to make a character addicted to a chemical.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
+[AutoGenerateComponentState, AutoGenerateComponentPause]
 public sealed partial class NicotineAddictionComponent : Component
 {
     /// <summary>
     /// Which reagent will the player be addicted to?
     /// </summary>
-    [DataField] // TODO: This should probably be a table or something so someone can have multiple addictions.
-    public ProtoId<ReagentPrototype> Reagent = "Nicotine";  // But at the moment I'm just trying to do a simple implementation, and allowing multiple addictions will require rethinking all of this.
+    [DataField]
+    public ProtoId<ReagentPrototype> Reagent = "Nicotine";
 
-    public float withdrawalAmount; // This number will grow over time, and the severity of symptoms will depend on it. Consuming the addicted reagent will lower the value.
+    /// <summary>
+    /// WithdrawalAmount will increase over time, and affect the severity of symptoms.
+    /// Consuming the addicted reagent will lower it.
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public FixedPoint2 WithdrawalAmount;
 
+    /// <summary>
+    /// The server time at which the withdrawal amount will go up.
+    /// </summary>
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [AutoNetworkedField, AutoPausedField]
+    public TimeSpan NextWithdrawal = TimeSpan.Zero;
+
+    /// <summary>
+    /// How often to update.
+    /// In this case every two seconds.
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public TimeSpan UpdateInterval = TimeSpan.FromSeconds(2);
 }
