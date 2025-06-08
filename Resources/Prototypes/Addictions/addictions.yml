@@ -1,0 +1,12 @@
+# Zombie
+- type: addiction
+  id: Nicotine
+  symptoms:
+  - 0
+    - cutoff: 0
+  - subtle message:
+    - cutoff: 12
+    - "You could [italic]really[/italic] go for a smoke."
+  - jittering:
+    - cutoff: 10
+  #- damage

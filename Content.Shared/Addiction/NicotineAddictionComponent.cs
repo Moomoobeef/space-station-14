@@ -3,6 +3,7 @@ using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.GameStates;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
 
 namespace Content.Shared.Addiction;
 
@@ -41,4 +42,10 @@ public sealed partial class NicotineAddictionComponent : Component
     [DataField]
     [AutoNetworkedField]
     public TimeSpan UpdateInterval = TimeSpan.FromSeconds(2);
+
+    /// <summary>
+    /// contains data about an addiction's symptoms. (right now only cutoffs) see /Resources/Prototypes/Addictions/addictions.yml
+    /// </summary>
+    [DataField("symptoms", customTypeSerializer: typeof(PrototypeIdHashSetSerializer<AddictionPrototype>)), ViewVariables(VVAccess.ReadOnly)]
+    public HashSet<string> Symptoms = new HashSet<string>();
 }
