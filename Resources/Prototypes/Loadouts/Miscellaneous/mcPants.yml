@@ -1,0 +1,5 @@
+# Jumpsuit
+- type: startingGear
+  id: McPantsJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformRandomShorts

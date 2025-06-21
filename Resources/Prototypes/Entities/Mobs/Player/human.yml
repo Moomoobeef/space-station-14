@@ -115,3 +115,12 @@
   - type: NpcFactionMember
     factions:
     - Wizard
+
+# Urist McPants
+- type: entity
+  parent: MobHuman
+  id: MobHumanMcPants
+  name: Urist McPants
+  components:
+  - type: Loadout
+    prototypes: [McPantsJumpsuit]
